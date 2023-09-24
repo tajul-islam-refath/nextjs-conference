@@ -43,8 +43,8 @@ const Schedule: React.FC<{ schedule: Schedule }> = ({ schedule }) => {
           <div className="schedule-card__">
             <ul>
               {allSessions &&
-                allSessions.map((session) => (
-                  <li>
+                allSessions.map((session, i) => (
+                  <li key={i}>
                     duration: {session.begin}-{session.end}
                     <br />
                     {session.type}
