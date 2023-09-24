@@ -1,0 +1,23 @@
+.schedule-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .date {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    .time {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  li {
+    margin: 6px 0;
+  }
+}

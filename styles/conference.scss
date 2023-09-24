@@ -1,0 +1,88 @@
+@import "./mixins";
+.conference {
+  padding-top: 130px;
+  padding-bottom: 30px;
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+  }
+  &__subtitle {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  &__warper {
+    display: flex;
+    @include break(xsmall) {
+      flex-direction: column;
+    }
+  }
+
+  &__navbar {
+    width: 350px;
+    @include break(xsmall) {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #d9d9d980;
+    margin: 8px 0;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+    &--active {
+      background-color: #ffc93e;
+      box-shadow: 0px 10px 20px 0px #a1a1a140;
+      a {
+        color: #fff;
+      }
+    }
+    &--icon {
+      background-color: #fffcf6;
+      width: 56px;
+      height: 56px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &:hover {
+      background-color: #ffc93e;
+      box-shadow: 0px 10px 20px 0px #a1a1a140;
+      a {
+        color: #fff;
+      }
+    }
+  }
+  .dragging {
+    /* Styles for the dragged element */
+    opacity: 0.7; /* Reduce opacity while dragging */
+    transform: scale(1.05); /* Scale up slightly while dragging */
+  }
+  &__link {
+    margin-left: 30px;
+    margin-bottom: 0;
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  &__body {
+    margin-left: 20px;
+    background: #f9fafb;
+    width: 100%;
+    border-radius: 8px;
+    padding: 30px;
+  }
+}
