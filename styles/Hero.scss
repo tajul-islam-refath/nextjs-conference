@@ -1,0 +1,91 @@
+@import "./mixins";
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../public/herobg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  @include break(xsmall) {
+    background-image: url("../public/mesh\ gradient.png");
+  }
+
+  &__content {
+    padding-top: 150px;
+    padding-bottom: 240px;
+    @include break(xsmall) {
+      padding-top: 110px;
+    }
+  }
+  &__text {
+    @include break(xsmall) {
+      width: 66%;
+      margin: auto;
+    }
+    h1 {
+      font-size: 110px;
+      font-weight: 700;
+      color: #111d5e;
+      text-align: end;
+      margin: 0;
+      @include break(xsmall) {
+        font-size: 60px;
+      }
+    }
+  }
+
+  &__img {
+    &--one {
+      position: absolute;
+      top: 120px;
+      left: 664px;
+      @include break(xsmall) {
+        top: 68px;
+        left: 197px;
+      }
+    }
+    &--two {
+      position: absolute;
+      top: 145px;
+      left: 721px;
+      z-index: -11;
+      @include break(xsmall) {
+        width: 427px;
+        top: 111px;
+        left: 276px;
+      }
+    }
+    &--five {
+      position: absolute;
+      bottom: 80px;
+      right: 718px;
+      z-index: 11;
+    }
+    &--six {
+      position: absolute;
+      bottom: 140px;
+      left: 434px;
+      z-index: -11;
+    }
+  }
+
+  .hero3 {
+    position: absolute;
+    margin-top: 180px;
+  }
+
+  .hero4 {
+    width: 100%;
+  }
+
+  &__buyticket {
+    border: none;
+    border-radius: 30px;
+    background-color: #ffc93e;
+    padding: 10px 50px;
+    margin-top: 30px;
+  }
+}
