@@ -2,7 +2,7 @@
 @mixin break($breakpoint) {
   // #Small devices - Smartphones portrait 📱- 576px and ^
   @if $breakpoint == xsmall {
-    @media only screen and (max-width: 576px) {
+    @media only screen and (max-width: 376px) {
       @content;
     }
   }
