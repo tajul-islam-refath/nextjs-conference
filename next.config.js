@@ -4,7 +4,6 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
-  target: "serverless",
 };
 
 module.exports = nextConfig;
