@@ -13,7 +13,11 @@ interface Props {
   sponsors: Sponsor[];
 }
 const Sponsors: React.FC<Props> = ({ sponsors }) => {
-  return <>{sponsors && sponsors.map((item) => <ListCard item={item} />)}</>;
+  return (
+    <>
+      {sponsors && sponsors.map((item, i) => <ListCard key={i} item={item} />)}
+    </>
+  );
 };
 
 export default Sponsors;

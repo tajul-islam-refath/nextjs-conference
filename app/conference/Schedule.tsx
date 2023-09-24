@@ -13,7 +13,9 @@ const Schedules: React.FC<Props> = ({ schedules }) => {
   return (
     <>
       {schedules &&
-        schedules.map((sched: Schedule) => <Schedule schedule={sched} />)}
+        schedules.map((sched: Schedule, i) => (
+          <Schedule key={i} schedule={sched} />
+        ))}
     </>
   );
 };

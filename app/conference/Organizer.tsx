@@ -14,7 +14,7 @@ interface Props {
 }
 const Organizer: React.FC<Props> = ({ organizers }) => {
   return (
-    <>{organizers && organizers.map((item) => <ListCard item={item} />)}</>
+    <>{organizers && organizers.map((item, i) => <ListCard key={i} item={item} />)}</>
   );
 };
 

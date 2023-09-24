@@ -19,7 +19,7 @@ interface Props {
 }
 
 const Speakers: React.FC<Props> = ({ speakers }) => {
-  return <>{speakers && speakers.map((item) => <ListCard item={item} />)}</>;
+  return <>{speakers && speakers.map((item, i) => <ListCard key={i} item={item} />)}</>;
 };
 
 export default Speakers;

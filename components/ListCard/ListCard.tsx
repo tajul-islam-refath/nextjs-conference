@@ -1,3 +1,4 @@
+import Image from "next/image";
 interface Item {
   name: string;
   about: string;
@@ -19,7 +20,7 @@ interface Props {
 const ListCard: React.FC<Props> = ({ item }) => {
   return (
     <div className="listCard">
-      <img src={item.image?.url} alt="" className="listCard__img" />
+      <Image src={item.image?.url} alt="" className="listCard__img" />
       <div className="listCard__content">
         <h3 className="listCard__title">{item.name}</h3>
         <h5 className="listCard__text">{item.about}</h5>
