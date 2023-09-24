@@ -8,9 +8,10 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  // overflow: hidden;
+
   @include break(xsmall) {
     background-image: url("../public/mesh\ gradient.png");
+    overflow: hidden;
   }
 
   &__content {
