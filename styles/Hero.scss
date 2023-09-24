@@ -8,7 +8,7 @@
   background-position: center;
   background-size: cover;
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   @include break(xsmall) {
     background-image: url("../public/mesh\ gradient.png");
   }
@@ -21,10 +21,7 @@
     }
   }
   &__text {
-    @include break(xsmall) {
-      width: 66%;
-      margin: auto;
-    }
+    width: 60%;
     h1 {
       font-size: 110px;
       font-weight: 700;
@@ -41,16 +38,17 @@
     &--one {
       position: absolute;
       top: 120px;
-      left: 664px;
+      left: 444px;
       @include break(xsmall) {
         top: 68px;
         left: 197px;
       }
     }
     &--two {
+      width: 50%;
       position: absolute;
-      top: 145px;
-      left: 721px;
+      top: 165px;
+      left: 581px;
       z-index: -11;
       @include break(xsmall) {
         width: 427px;
@@ -60,25 +58,29 @@
     }
     &--five {
       position: absolute;
-      bottom: 80px;
-      right: 718px;
+      bottom: 285px;
+      right: 396px;
       z-index: 11;
     }
     &--six {
       position: absolute;
-      bottom: 140px;
-      left: 434px;
+      bottom: 157px;
+      left: 249px;
       z-index: -11;
     }
   }
 
   .hero3 {
     position: absolute;
-    margin-top: 180px;
+    width: 410px !important;
+    height: 448px !important;
+    margin-top: -128px;
+    object-fit: contain;
   }
 
   .hero4 {
-    width: 100%;
+    width: 329px;
+    height: 420px;
   }
 
   &__buyticket {

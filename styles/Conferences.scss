@@ -22,7 +22,10 @@
   &__list {
     margin: 20px 0;
     padding: 0;
-    display: inline-block;
+    margin-left: 340px;
+    @include break(xsmall) {
+      margin-left: 0px;
+    }
   }
 
   &__item {
@@ -61,6 +64,12 @@
       height: 48px;
       width: 48px;
       transition: all 500ms ease-in-out;
+      @include break(xsmall) {
+        height: 25px;
+        width: 25px;
+        left: -12px;
+        top: -48px;
+      }
     }
     &:hover {
       border-left-color: #ffc93e;
@@ -92,6 +101,9 @@
       &--even {
         top: -47px;
       }
+      @include break(xsmall) {
+        margin-left: 3px;
+      }
     }
 
     .card {
@@ -107,7 +119,7 @@
       position: relative;
       box-shadow: 0px 4px 8px 0px #0000000f;
       @include break(xsmall) {
-        width: 380px;
+        width: 220px;
       }
       &:hover {
         border-top-color: #ffc93e !important;
@@ -118,7 +130,7 @@
         left: -548px;
         top: -42px;
         @include break(xsmall) {
-          left: 15px;
+          left: 8px;
           top: 0px;
         }
       }
@@ -128,6 +140,7 @@
         top: -38px;
         @include break(xsmall) {
           top: -6px;
+          margin-left: 4px;
         }
       }
 
@@ -146,6 +159,16 @@
           height: 20px;
           width: 20px;
           transition: all 500ms ease-in-out;
+        }
+
+        @include break(xsmall) {
+          font-size: 12px;
+        }
+      }
+
+      &__text {
+        @include break(xsmall) {
+          font-size: 10px;
         }
       }
     }

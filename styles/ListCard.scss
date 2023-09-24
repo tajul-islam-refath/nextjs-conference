@@ -1,3 +1,4 @@
+@import "./mixins";
 .listCard {
   display: flex;
   align-items: center;
@@ -20,5 +21,25 @@
   &__text {
     font-size: 16px;
     font-weight: 400;
+  }
+
+  @include break(xsmall) {
+    padding: 6px;
+    &__content {
+      margin-left: 4px;
+    }
+    &__img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+    &__title {
+      font-size: 10px;
+      font-weight: 700;
+    }
+    &__text {
+      font-size: 8px;
+      font-weight: 400;
+    }
   }
 }

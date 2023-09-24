@@ -2,13 +2,23 @@
 .conference {
   padding-top: 130px;
   padding-bottom: 30px;
+  @include break(xsmall) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   &__title {
     font-size: 48px;
     font-weight: 700;
+    @include break(xsmall) {
+      font-size: 24px;
+    }
   }
   &__subtitle {
     font-size: 20px;
     font-weight: 400;
+    @include break(xsmall) {
+      font-size: 14px;
+    }
   }
 
   &__warper {
@@ -64,6 +74,14 @@
         color: #fff;
       }
     }
+
+    @include break(xsmall) {
+      &--icon {
+        background-color: #fffcf6;
+        width: 36px;
+        height: 36px;
+      }
+    }
   }
   .dragging {
     /* Styles for the dragged element */
@@ -76,6 +94,9 @@
     color: #000;
     font-size: 20px;
     font-weight: 700;
+    @include break(xsmall) {
+      font-size: 14px;
+    }
   }
 
   &__body {
@@ -84,5 +105,9 @@
     width: 100%;
     border-radius: 8px;
     padding: 30px;
+    @include break(xsmall) {
+      margin-left: 0px;
+      padding: 10px;
+    }
   }
 }
